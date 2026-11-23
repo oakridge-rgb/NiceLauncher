@@ -41,6 +41,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
             android:format12Hour="h:mm"
+            android:letterSpacing="-0.01"
             android:textSize="@dimen/time_size"
             tools:text="02:34" />
 
@@ -51,7 +52,9 @@
             android:layout_height="wrap_content"
             android:format12Hour="EEE, dd MMM"
             android:format24Hour="EEE, dd MMM"
+            android:letterSpacing="0.15"
             android:paddingHorizontal="3dp"
+            android:textAllCaps="true"
             android:textSize="@dimen/date_size"
             tools:text="Thu, 30 Dec" />
     </LinearLayout>

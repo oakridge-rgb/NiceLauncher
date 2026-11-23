@@ -1,43 +1,40 @@
-![Olauncher](https://repository-images.githubusercontent.com/278638069/db0acb80-661b-11eb-803e-926cae5dccb4)
+# Nice Launcher
 
+A fork of [Olauncher](https://github.com/tanujnotes/Olauncher) (Minimal AF Launcher)
+with a **Graphite & Ice** restyle — cool, quiet, and electric.
 
-# Olauncher | Minimal AF Launcher
-AF stands for Ad-Free! :D
+![Nice Launcher](fastlane/metadata/android/en-US/images/icon.png)
 
-[<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-    alt="Get it on Play Store"
-    height="80" align="middle">](https://play.google.com/store/apps/details?id=app.olauncher)
-[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
-    alt="Get it on F-Droid"
-    height="80" align="middle">](https://f-droid.org/packages/app.olauncher)
-[<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroidButtonGreyBorder_nofont.png"
-    alt="Get it on IzzyOnDroid"
-    height="54" hspace="13" align="middle">](https://apt.izzysoft.de/packages/app.olauncher)
+## What's different from Olauncher
 
-#### Install using [Play Store,](https://play.google.com/store/apps/details?id=app.olauncher) [F-Droid,](https://f-droid.org/packages/app.olauncher) [IzzyOnDroid](https://apt.izzysoft.de/packages/app.olauncher) or the [latest APK.](https://github.com/tanujnotes/Olauncher/releases/)
+| | Olauncher | Nice Launcher |
+| --- | --- | --- |
+| Identity | Olauncher branding, yellow accent | **Nice Launcher**, ice-cyan accent (`#22D3EE`) |
+| Palette | pure black / pure white text | **graphite** (`#15181E`) day text, **ice-white** (`#F4F8FB`) night text — everything downstream (shadows, dialogs, popups, drawer) retints automatically via the theme attrs |
+| Clock | 50–66sp, plain date | bigger clock (54–72sp) with tight tracking, **small-caps letterspaced date** |
+| Icon | Olauncher logo | geometric **N** glyph, ice gradient on graphite, adaptive + all densities |
+| Install | `app.olauncher` | `app.nicelauncher` (installs side-by-side with Olauncher) |
+| Version | 6.11.5 (117) | 6.11.5-nice.1 (118) |
 
-To maintain the simplicity of the launcher, a few niche features are available but hidden.
+Everything else is untouched Olauncher: gestures, hidden apps, daily wallpapers,
+work-profile support, double-tap-to-lock. **Zero Kotlin code changed** — the whole
+restyle rides on Olauncher's resource-driven theme system (`primaryColor` attrs),
+which is exactly why this fork will stay easy to rebase onto upstream releases.
 
-Please check out the **[About](https://tanujnotes.substack.com/p/olauncher-minimal-af-launcher?utm_source=github)** page in the Olauncher settings for a complete list of features and **FAQs**.
+## Build
 
-##
+Standard Android project: open in Android Studio / Code on the Go, or:
 
-License: [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
+```
+./gradlew assembleDebug      # APK at app/build/outputs/apk/debug/
+```
 
-Developer: [@tanujnotes](https://x.com/tanujnotes)
+AGP 8.9.1, Kotlin 2.1.20, Gradle 8.11.1, minSdk 24, targetSdk 36. No extra
+repositories, no snapshot dependencies.
 
-##
+## Credits & license
 
-### Other apps from team Olauncher:
-
-- [Pro Launcher](https://play.google.com/store/apps/details?id=app.prolauncher) - Pro version of Olauncher with extra features like widgets, weather, folders, etc.
-
-- [Note to Self](https://play.google.com/store/apps/details?id=com.makenotetoself) - Free and [open source](https://github.com/jeerovan/ntsapp) notes app with chat like interface and end-to-end encryption.
-
-- [Pentastic](https://play.google.com/store/apps/details?id=app.pentastic) - Free and [open source](https://github.com/tanujnotes/Pentastic). A minimal tasks, notes and reminders app.
-
-- [Supernova](https://github.com/tanujnotes/Supernova) - Free and [open source](https://github.com/tanujnotes/Supernova) alternative of Nova Launcher.
-
-##
-
-Thank you!
+All credit for the launcher itself goes to [Tanuj](https://github.com/tanujnotes)
+and the Olauncher contributors — this fork only re-dresses it. GPLv3, same as
+upstream. The "Olauncher Pro" listing referenced in-app still belongs to the
+original developer.
